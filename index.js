@@ -1,14 +1,15 @@
 const express = require('express');
-const db = require('./db/dbConect');
 
 const app = express();
 
-app.get('/all', async (req, res) => {
-    const result = await db.query("SELECT * FROM usuario");
-    console.table(result.rows);
+app.use(express.urlencoded({extended: false}));
+app.use(express.json());
 
-    res.send({"rows": result.rows});
-});
+//Definindo as rotas
+app.use('/', require('./routes/home.js'));
+app.use('/login', require('./routes/login.js'));
+app.use('/registro', require('./routes/registro.js'));
+app.use('/users', require('./routes/users.js'));
 
 app.listen(3000, () => {
     console.log(`escutando a porta 3000`);
