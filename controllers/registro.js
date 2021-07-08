@@ -1,7 +1,14 @@
+
 const primeiraFuncao = (req, res) =>{
-    res.send('Página de registro');
+    res.render('registro');
+}
+
+const registrar = (req, res) =>{
+    res.send('recebido');
+    console.log(req.body);
 }
 
 module.exports = {
-    primeiraFuncao
+    primeiraFuncao,
+    registrar
 }

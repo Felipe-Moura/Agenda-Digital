@@ -1,5 +1,5 @@
 const primeiraFuncao = (req, res) =>{
-    res.send('Homepage');
+    res.render('home');
 }
 
 module.exports = {

@@ -1,7 +1,13 @@
 const primeiraFuncao = (req, res) =>{
-    res.send('Página de login');
+    res.render('login');
+}
+
+const logar = (req, res) =>{
+    res.send('recebido');
+    console.log(req.body);
 }
 
 module.exports = {
-    primeiraFuncao
+    primeiraFuncao,
+    logar
 }
