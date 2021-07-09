@@ -3,9 +3,11 @@ const path = require('path');
 
 const app = express();
 
+//configurando o recebimento do input de usuarios
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
+//Configurando a renderização da views
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
