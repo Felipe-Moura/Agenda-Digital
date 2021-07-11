@@ -5,6 +5,6 @@ const controller = require('../controllers/home.js');
 const router = express.Router();
 
 //Rota raiz
-router.get('/', controller.primeiraFuncao);
+router.get('/', controller.getHome);
 
 module.exports = router;

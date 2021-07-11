@@ -1,7 +1,7 @@
-const primeiraFuncao = (req, res) =>{
+const getHome = (req, res) =>{
     res.render('home');
 }
 
 module.exports = {
-    primeiraFuncao
+    getHome
 }

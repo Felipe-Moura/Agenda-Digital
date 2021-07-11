@@ -13,9 +13,34 @@
         <a href="/users/update">Atualizar contato </a>
     </div>
 
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+
     <div>
-        tabela
+        <li>
+            <spam> </spam>
+            <spam>Nome </spam>
+            <spam>Telefone </spam>
+            <spam>Email </spam>
+            <spam>Endereço </spam>
+            <spam>Cidade </spam>
+            <spam>CEP </spam>
+        </li>
     </div>
+
+    <div>
+        <% for(var i = 0; i<contatos.rows.length; i++){ %>
+            <%= contatos.rows[i].id %>
+            <%= contatos.rows[i].nome %>
+            <%= contatos.rows[i].telefone %>
+            <%= contatos.rows[i].email %>
+            <%= contatos.rows[i].endereco %>
+            <%= contatos.rows[i].cidade %>
+            <%= contatos.rows[i].cep %>
+            <br>
+        <% } %>
+    </div>
+
+<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
 </body>
 </html>

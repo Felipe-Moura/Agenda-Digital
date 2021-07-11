@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atualizando Contato</title>
+</head>
+<body>
+    
+    <a href="/users">Contatos</a>
+
+    <form action="/users/update/busca" method="POST">
+        <label for="nomeBusca" name="lblNomeBusca">Digite o nome do Contato:</label>
+        <input type="text" name="nomeBusca" value=<%= contato.rows[0].nome %>>
+        <button type="submit">Procurar</button>
+        <br>
+    </form>
+
+    <form action="/users/update" method="POST">
+        <label for="idContato" name="lblIdContato">N°:</label></br>
+        <input type="text" name="idContato" value=<%= contato.rows[0].id %>><br>
+        <label for="nomeContato" name="lblNomeContato">Nome:</label></br>
+        <input type="text" name="nomeContato" value=<%= contato.rows[0].nome %>><br>
+        <label for="telefoneContato" name="lblTelefoneContato">Telefone:</label></br>
+        <input type="text" name="telefoneContato" value=<%= contato.rows[0].telefone %>><br>
+        <label for="emailContato" name="lblEmailContato">Email:</label></br>
+        <input type="text" name="emailContato" value=<%= contato.rows[0].email %>><br>
+        <label for="enderecoContato" name="lblEncerecoContato">Endereço:</label></br>
+        <input type="text" name="enderecoContato" value=<%= contato.rows[0].endereco %>><br>
+        <label for="cidadeContato" name="lblCidadeContato">Cidade:</label></br>
+        <input type="text" name="cidadeContato" value=<%= contato.rows[0].cidade %>><br>
+        <label for="cepContato" name="lblCepContato">CEP:</label></br>
+        <input type="text" name="cepContato" value=<%= contato.rows[0].cep %>><br>
+        <label for="grupoContato" name="lblGrupoContato">Grupo:</label></br>
+        <input type="text" name="grupoContato" value=<%= contato.rows[0].grupo %>><br>
+        <button type="submit">Atualizar</button>
+    </form>
+
+</body>
+</html>

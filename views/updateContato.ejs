@@ -10,23 +10,14 @@
     
     <a href="/users">Contatos</a>
 
-    <form action="/users/update" method="POST">
-        <label for="nomeContato" name="lblNomeContato">Nome:</label></br>
-        <input type="text" name="nomeContato"><br>
-        <label for="telefoneContato" name="lblTelefoneContato">Telefone:</label></br>
-        <input type="text" name="telefoneContato"><br>
-        <label for="emailContato" name="lblEmailContato">Email:</label></br>
-        <input type="text" name="emailContato"><br>
-        <label for="enderecoContato" name="lblEncerecoContato">Endereço:</label></br>
-        <input type="text" name="enderecoContato"><br>
-        <label for="cidadeContato" name="lblCidadeContato">Cidade:</label></br>
-        <input type="text" name="cidadeContato"><br>
-        <label for="cepContato" name="lblCepContato">CEP:</label></br>
-        <input type="text" name="cepContato"><br>
-        <label for="grupoContato" name="lblGrupoContato">Gripo:</label></br>
-        <input type="text" name="grupoContato"><br>
-        <button type="submit">Enviar</button>
+    <form action="/users/update/busca" method="POST">
+        <label for="nomeBusca" name="lblNomeBusca">Digite o nome do Contato:</label>
+        <input type="text" name="nomeBusca">
+        <button type="submit">Procurar</button>
+        <br>
     </form>
+
+    <div> <%- resultado %> </div>
 
 </body>
 </html>
