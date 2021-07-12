@@ -18,7 +18,7 @@
 
     <form action="/users/delete" method="POST">
         <label for="idContato" name="lblIdContato">N°:</label></br>
-        <input type="text" name="idContato" value=<%= contato.rows[0].id %>><br>
+        <input type="text" name="idContato" readonly value=<%= contato.rows[0].id %>><br>
         <label for="nomeContato" name="lblNomeContato">Nome:</label></br>
         <input type="text" name="nomeContato" value=<%= contato.rows[0].nome %>><br>
         <label for="telefoneContato" name="lblTelefoneContato">Telefone:</label></br>

@@ -6,6 +6,7 @@ const router = express.Router();
 
 // todas as rotas já começam com /users
 router.get('/', controller.getUsers);
+router.post('/', controller.filtroUsers);
 
 router.get('/cadastro', controller.getCadastro);
 router.post('/cadastro', controller.cadastrando);

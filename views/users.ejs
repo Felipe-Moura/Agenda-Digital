@@ -14,6 +14,34 @@
         <a href="/users/delete">Apagar contato </a>
     </div>
 
+    <div>
+        <form action="/users" method="POST">
+            <label for="nomeContato" name="lblNomeContato">Nome: </label>
+            <input type="text" name="nomeContato" value=" ">
+            <label for="telefoneContato" name="lblTelefoneContato">Telefone: </label>
+            <input type="text" name="telefoneContato" value=" ">
+            <label for="emailContato" name="lblEmailContato">Email: </label>
+            <input type="text" name="emailContato" value=" ">
+            <label for="enderecoContato" name="lblEnderecoContato">Endereço: </label>
+            <input type="text" name="enderecoContato" value=" ">
+            <label for="cidadeContato" name="lblCidadeContato">Cidade: </label>
+            <input type="text" name="cidadeContato" value=" ">
+            <label for="cepContato" name="lblCepContato">CEP: </label>
+            <input type="text" name="cepContato" value=" ">
+            <label for="grupoContato" name="lblGrupoContato">Grupo: </label>
+            <input list="grupo" name="grupoContato">
+            <datalist id="grupo">
+                <% for(var j = 0; j < contatos.rows.length; j++) { %>
+                    <option value=<%= contatos.rows[j].grupo %>>
+                <% } %>
+            </datalist>
+            <button type="submit">Pesquisar</button>
+        </form>
+
+        <div> <%- resultado %> </div>
+
+    </div>
+
 <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
     <div>
@@ -29,7 +57,7 @@
     </div>
 
     <div>
-        <% for(var i = 0; i<contatos.rows.length; i++){ %>
+        <% for(var i = 0; i < contatos.rows.length; i++){ %>
             <%= contatos.rows[i].nome %>
             <%= contatos.rows[i].telefone %>
             <%= contatos.rows[i].email %>
