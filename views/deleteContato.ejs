@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deletar Contato</title>
+</head>
+<body>
+    <a href="/users">Contatos</a>
+
+    <form action="/users/delete/busca" method="POST">
+        <label for="nomeBusca" name="lblNomeBusca">Digite o nome do Contato:</label>
+        <input type="text" name="nomeBusca">
+        <button type="submit">Procurar</button>
+        <br>
+    </form>
+
+    <div> <%- resultado %> </div>
+
+</body>
+</html>

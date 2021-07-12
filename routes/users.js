@@ -14,4 +14,8 @@ router.get('/update', controller.getUpdateCadastro);
 router.post('/update', controller.atualizando);
 router.post('/update/busca', controller.buscaUpdate);
 
+router.get('/delete', controller.getDeletarContato);
+router.post('/delete', controller.deletar);
+router.post('/delete/busca', controller.buscaDelete);
+
 module.exports = router;

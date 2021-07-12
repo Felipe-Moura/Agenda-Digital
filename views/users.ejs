@@ -11,6 +11,7 @@
     <div>
         <a href="/users/cadastro">Cadastar contato </a>
         <a href="/users/update">Atualizar contato </a>
+        <a href="/users/delete">Apagar contato </a>
     </div>
 
 <!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
@@ -29,7 +30,6 @@
 
     <div>
         <% for(var i = 0; i<contatos.rows.length; i++){ %>
-            <%= contatos.rows[i].id %>
             <%= contatos.rows[i].nome %>
             <%= contatos.rows[i].telefone %>
             <%= contatos.rows[i].email %>
