@@ -1,10 +1,12 @@
 const db = require('../db/dbConect.js');
 const bcrypt = require('bcrypt');
 
+//Gerencia a chamada a página de login
 const getLogin = (req, res) =>{
     res.render('login');
 }
 
+//Loga o usuário
 const logar = async (req, res) =>{
     const {email, senha} = req.body;
     let result = await db.query(`SELECT * FROM usuario WHERE email = '${email}'`);
