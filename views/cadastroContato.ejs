@@ -40,7 +40,6 @@
         }
 
         #formulario{
-            background-color: green;
             margin: auto;
             width: 30%;
             margin-top: 10%;
@@ -48,12 +47,17 @@
             padding-top: 10px;
             padding-bottom: 10px;
             color: white;
+            background-color: green;
+        }
+
+        #btn{
+            margin-top: 2%;
         }
 
     </style>
 
 </head>
-<body>
+<body id="meubody">
     <div id="cabecalho">
         <span id="titulo">Cadastro de Contatos</span>
         <span id="side">
@@ -63,21 +67,21 @@
 
     <div id="centro">
         <form action="/users/cadastro" method="POST" id="formulario">
-            <label for="nomeContato" name="lblNomeContato">Nome:</label></br>
+            <label for="nomeContato" name="lblNomeContato"><strong>Nome:</strong></label><br>
             <input type="text" name="nomeContato"><br>
-            <label for="telefoneContato" name="lblTelefoneContato">Telefone:</label></br>
+            <label for="telefoneContato" name="lblTelefoneContato"><strong>Telefone:</strong></label><br>
             <input type="text" name="telefoneContato"><br>
-            <label for="emailContato" name="lblEmailContato">Email:</label></br>
+            <label for="emailContato" name="lblEmailContato"><strong>Email:</strong></label><br>
             <input type="text" name="emailContato"><br>
-            <label for="enderecoContato" name="lblEncerecoContato">Endereço:</label></br>
+            <label for="enderecoContato" name="lblEncerecoContato"><strong>Endereço:</strong></label><br>
             <input type="text" name="enderecoContato"><br>
-            <label for="cidadeContato" name="lblCidadeContato">Cidade:</label></br>
+            <label for="cidadeContato" name="lblCidadeContato"><strong>Cidade:</strong></label><br>
             <input type="text" name="cidadeContato"><br>
-            <label for="cepContato" name="lblCepContato">CEP:</label></br>
+            <label for="cepContato" name="lblCepContato"><strong>CEP:</strong></label><br>
             <input type="text" name="cepContato"><br>
-            <label for="grupoContato" name="lblGrupoContato">Grupo:</label></br>
+            <label for="grupoContato" name="lblGrupoContato"><strong>Grupo:</strong></label><br>
             <input type="text" name="grupoContato"><br>
-            <button type="submit">Enviar</button>
+            <button type="submit" id="btn">Enviar</button>
         </form>
     </div>
 
