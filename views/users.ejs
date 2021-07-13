@@ -5,16 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Usuarios</title>
+
+    <style>
+        #cabecalho{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-shadow: 0px 2px 10px gray;
+        }
+
+        #titulo{
+            color:green;
+            font-size: larger;
+        }
+
+        #meuLink{
+            text-decoration: none;
+            color: green;
+        }
+
+        #meuLink2{
+            text-decoration: none;
+            color: white;
+            background-color: green;
+            border-radius: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #side{
+            padding-left: 66%;
+        }
+
+        #centro{
+            text-align: center;
+        }
+
+        #filtros{
+            background-color: green;
+            margin: auto;
+            color: white;
+            margin-top: 10px;
+            border-radius: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        #formulario{
+            background-color: lightgreen;
+            margin: auto;
+            margin-top: 3%;
+            border-radius: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: green;
+        }
+
+    </style>
+
 </head>
 <body>
     
-    <div>
-        <a href="/users/cadastro">Cadastar contato </a>
-        <a href="/users/update">Atualizar contato </a>
-        <a href="/users/delete">Apagar contato </a>
+    <div id="cabecalho">
+        <span id="titulo">Usuários</span>
+        <span id="side">
+            <a href="/users/cadastro" id="meuLink2">Cadastar contato </a>
+            <a href="/users/update" id="meuLink2">Atualizar contato </a>
+            <a href="/users/delete" id="meuLink2">Apagar contato </a>
+        </span>
     </div>
 
-    <div>
+    <div id="filtros">
         <form action="/users" method="POST">
             <label for="nomeContato" name="lblNomeContato">Nome: </label>
             <input type="text" name="nomeContato" value=" ">
@@ -27,7 +93,7 @@
             <label for="cidadeContato" name="lblCidadeContato">Cidade: </label>
             <input type="text" name="cidadeContato" value=" ">
             <label for="cepContato" name="lblCepContato">CEP: </label>
-            <input type="text" name="cepContato" value=" ">
+            <input type="text" name="cepContato" value=" "><br>
             <label for="grupoContato" name="lblGrupoContato">Grupo: </label>
             <input list="grupo" name="grupoContato">
             <datalist id="grupo">
@@ -42,33 +108,30 @@
 
     </div>
 
-<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
+    <div id="centro">
+        <table id="formulario">
+            <tr>
+                <th>Nome</th>
+                <th>Telefone</th>
+                <th>Email</th>
+                <th>Endereço</th>
+                <th>Cedade</th>
+                <th>CEP</th>
+            </tr>
+            
+            <% for(var i = 0; i < contatos.rows.length; i++){ %>
+                <tr>
+                    <td><%= contatos.rows[i].nome %> |</td>
+                    <td><%= contatos.rows[i].telefone %> |</td>
+                    <td><%= contatos.rows[i].email %> |</td>
+                    <td><%= contatos.rows[i].endereco %> |</td>
+                    <td><%= contatos.rows[i].cidade %> |</td>
+                    <td><%= contatos.rows[i].cep %> </td>
+                </tr>
+            <% } %>
+        </table>
 
-    <div>
-        <li>
-            <spam> </spam>
-            <spam>Nome </spam>
-            <spam>Telefone </spam>
-            <spam>Email </spam>
-            <spam>Endereço </spam>
-            <spam>Cidade </spam>
-            <spam>CEP </spam>
-        </li>
     </div>
-
-    <div>
-        <% for(var i = 0; i < contatos.rows.length; i++){ %>
-            <%= contatos.rows[i].nome %>
-            <%= contatos.rows[i].telefone %>
-            <%= contatos.rows[i].email %>
-            <%= contatos.rows[i].endereco %>
-            <%= contatos.rows[i].cidade %>
-            <%= contatos.rows[i].cep %>
-            <br>
-        <% } %>
-    </div>
-
-<!-- |||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||| -->
 
 </body>
 </html>

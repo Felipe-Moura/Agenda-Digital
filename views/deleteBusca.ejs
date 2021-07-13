@@ -5,36 +5,103 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Deletar Contato</title>
+
+    <style>
+        #cabecalho{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-shadow: 0px 2px 10px gray;
+        }
+
+        #titulo{
+            color:green;
+            font-size: larger;
+        }
+
+        #meuLink{
+            text-decoration: none;
+            color: white;
+            background-color: green;
+            border-radius: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #side{
+            padding-left: 85%;
+        }
+
+        #centro{
+            text-align: center;
+        }
+
+        #pesquisa{
+            background-color: green;
+            margin: auto;
+            color: white;
+            margin-top: 10px;
+            border-radius: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+        }
+
+        #formulario{
+            background-color: green;
+            margin: auto;
+            width: 30%;
+            margin-top: 3%;
+            border-radius: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+        }
+
+    </style>
+
 </head>
 <body>
-    <a href="/users">Contatos</a>
+    <div id="cabecalho">
+        <span id="titulo">Apagar Contato</span>
+        <span id="side">
+            <a href="/users" id="meuLink">Contatos</a>
+        </span>
+    </div>
 
-    <form action="/users/delete/busca" method="POST">
-        <label for="nomeBusca" name="lblNomeBusca">Digite o nome do Contato:</label>
-        <input type="text" name="nomeBusca" value=<%= contato.rows[0].nome %>>
-        <button type="submit">Procurar</button>
-        <br>
-    </form>
+    <div id="pesquisa">
+        <form action="/users/delete/busca" method="POST">
+            <label for="nomeBusca" name="lblNomeBusca">Digite o nome do Contato:</label>
+            <input type="text" name="nomeBusca">
+            <button type="submit">Procurar</button>
+        </form>
+    </div>
 
-    <form action="/users/delete" method="POST">
-        <label for="idContato" name="lblIdContato">N°:</label></br>
-        <input type="text" name="idContato" readonly value=<%= contato.rows[0].id %>><br>
-        <label for="nomeContato" name="lblNomeContato">Nome:</label></br>
-        <input type="text" name="nomeContato" value=<%= contato.rows[0].nome %>><br>
-        <label for="telefoneContato" name="lblTelefoneContato">Telefone:</label></br>
-        <input type="text" name="telefoneContato" value=<%= contato.rows[0].telefone %>><br>
-        <label for="emailContato" name="lblEmailContato">Email:</label></br>
-        <input type="text" name="emailContato" value=<%= contato.rows[0].email %>><br>
-        <label for="enderecoContato" name="lblEncerecoContato">Endereço:</label></br>
-        <input type="text" name="enderecoContato" value=<%= contato.rows[0].endereco %>><br>
-        <label for="cidadeContato" name="lblCidadeContato">Cidade:</label></br>
-        <input type="text" name="cidadeContato" value=<%= contato.rows[0].cidade %>><br>
-        <label for="cepContato" name="lblCepContato">CEP:</label></br>
-        <input type="text" name="cepContato" value=<%= contato.rows[0].cep %>><br>
-        <label for="grupoContato" name="lblGrupoContato">Grupo:</label></br>
-        <input type="text" name="grupoContato" value=<%= contato.rows[0].grupo %>><br>
-        <button type="submit">Deletar</button>
-    </form>
+    <div id="centro">
+        <form action="/users/delete" method="POST" id="formulario">
+            <label for="idContato" name="lblIdContato">N°:</label></br>
+            <input type="text" name="idContato" readonly value=<%= contato.rows[0].id %>><br>
+            <label for="nomeContato" name="lblNomeContato">Nome:</label></br>
+            <input type="text" name="nomeContato" value=<%= contato.rows[0].nome %>><br>
+            <label for="telefoneContato" name="lblTelefoneContato">Telefone:</label></br>
+            <input type="text" name="telefoneContato" value=<%= contato.rows[0].telefone %>><br>
+            <label for="emailContato" name="lblEmailContato">Email:</label></br>
+            <input type="text" name="emailContato" value=<%= contato.rows[0].email %>><br>
+            <label for="enderecoContato" name="lblEncerecoContato">Endereço:</label></br>
+            <input type="text" name="enderecoContato" value=<%= contato.rows[0].endereco %>><br>
+            <label for="cidadeContato" name="lblCidadeContato">Cidade:</label></br>
+            <input type="text" name="cidadeContato" value=<%= contato.rows[0].cidade %>><br>
+            <label for="cepContato" name="lblCepContato">CEP:</label></br>
+            <input type="text" name="cepContato" value=<%= contato.rows[0].cep %>><br>
+            <label for="grupoContato" name="lblGrupoContato">Grupo:</label></br>
+            <input type="text" name="grupoContato" value=<%= contato.rows[0].grupo %>><br>
+            <button type="submit">Deletar</button>
+        </form>
+    </div>
 
 
 </body>

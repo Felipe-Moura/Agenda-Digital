@@ -5,28 +5,81 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cadastrando Contato</title>
+
+    <style>
+        #cabecalho{
+            padding-top: 15px;
+            padding-bottom: 15px;
+            padding-left: 10px;
+            padding-right: 10px;
+            box-shadow: 0px 2px 10px gray;
+        }
+
+        #titulo{
+            color:green;
+            font-size: larger;
+        }
+
+        #meuLink{
+            text-decoration: none;
+            color: white;
+            background-color: green;
+            border-radius: 10px;
+            padding-left: 5px;
+            padding-right: 5px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+        }
+
+        #side{
+            padding-left: 80%;
+        }
+
+        #centro{
+            text-align: center;
+        }
+
+        #formulario{
+            background-color: green;
+            margin: auto;
+            width: 30%;
+            margin-top: 10%;
+            border-radius: 10px;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            color: white;
+        }
+
+    </style>
+
 </head>
 <body>
-    
-    <a href="/users">Contatos</a>
+    <div id="cabecalho">
+        <span id="titulo">Cadastro de Contatos</span>
+        <span id="side">
+            <a href="/users" id="meuLink">Contatos</a>
+        </span>
+    </div>
 
-    <form action="/users/cadastro" method="POST">
-        <label for="nomeContato" name="lblNomeContato">Nome:</label></br>
-        <input type="text" name="nomeContato"><br>
-        <label for="telefoneContato" name="lblTelefoneContato">Telefone:</label></br>
-        <input type="text" name="telefoneContato"><br>
-        <label for="emailContato" name="lblEmailContato">Email:</label></br>
-        <input type="text" name="emailContato"><br>
-        <label for="enderecoContato" name="lblEncerecoContato">Endereço:</label></br>
-        <input type="text" name="enderecoContato"><br>
-        <label for="cidadeContato" name="lblCidadeContato">Cidade:</label></br>
-        <input type="text" name="cidadeContato"><br>
-        <label for="cepContato" name="lblCepContato">CEP:</label></br>
-        <input type="text" name="cepContato"><br>
-        <label for="grupoContato" name="lblGrupoContato">Grupo:</label></br>
-        <input type="text" name="grupoContato"><br>
-        <button type="submit">Enviar</button>
-    </form>
+    <div id="centro">
+        <form action="/users/cadastro" method="POST" id="formulario">
+            <label for="nomeContato" name="lblNomeContato">Nome:</label></br>
+            <input type="text" name="nomeContato"><br>
+            <label for="telefoneContato" name="lblTelefoneContato">Telefone:</label></br>
+            <input type="text" name="telefoneContato"><br>
+            <label for="emailContato" name="lblEmailContato">Email:</label></br>
+            <input type="text" name="emailContato"><br>
+            <label for="enderecoContato" name="lblEncerecoContato">Endereço:</label></br>
+            <input type="text" name="enderecoContato"><br>
+            <label for="cidadeContato" name="lblCidadeContato">Cidade:</label></br>
+            <input type="text" name="cidadeContato"><br>
+            <label for="cepContato" name="lblCepContato">CEP:</label></br>
+            <input type="text" name="cepContato"><br>
+            <label for="grupoContato" name="lblGrupoContato">Grupo:</label></br>
+            <input type="text" name="grupoContato"><br>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
 
 </body>
 </html>
