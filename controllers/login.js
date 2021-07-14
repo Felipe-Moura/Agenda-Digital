@@ -3,7 +3,7 @@ const bcrypt = require('bcrypt');
 
 //Gerencia a chamada a página de login
 const getLogin = (req, res) =>{
-    res.render('login');
+    res.render('login', {resultado: ' '});
 }
 
 //Loga o usuário
@@ -12,16 +12,15 @@ const logar = async (req, res) =>{
     let result = await db.query(`SELECT * FROM usuario WHERE email = '${email}'`);
     if(result.rowCount > 0){
         if(await bcrypt.compare(senha, result.rows[0].senha)){
-            //Redirecionar para a página do usuario
-            res.send('logado');
+            const result = await db.query("SELECT * FROM contato");
+            res.render('users', {contatos: result, resultado: ' '});
         }
         else{
-            //Mudar para um aviso ao usuario
-            res.send('Usuario não cadastrado');
+            res.render('login', {resultado: 'Usuário não Cadastrado'});
         }
     }
     else{
-        res.send('Usuario não cadastrado')
+        res.render('login', {resultado: 'Usuário não Cadastrado'});
     }
 }
 

@@ -10,22 +10,17 @@
         #cabecalho{
             padding-top: 15px;
             padding-bottom: 15px;
-            padding-left: 10px;
-            padding-right: 10px;
-            box-shadow: 0px 2px 10px gray;
+            background-image: url("base-cabecalho.png");
+            background-size: 100%;
         }
 
         #titulo{
             color:green;
-            font-size: larger;
+            font-size: 30px;
+            margin-left: 5px;
         }
 
         #meuLink{
-            text-decoration: none;
-            color: green;
-        }
-
-        #meuLink2{
             text-decoration: none;
             color: white;
             background-color: green;
@@ -37,7 +32,16 @@
         }
 
         #side{
-            padding-left: 80%;
+            padding-left: 66%;
+        }
+
+        body{
+            background-image: url("bg-ondas.png");
+            background-size: 100%;
+        }
+
+        #imagem{
+            margin-left: 2%;
         }
                 
     </style>
@@ -46,14 +50,13 @@
 <body>
 
     <header id="cabecalho">
+        <img src="logo-icone-cabecalho.png" id="imagem">
         <span id="titulo">Agenda de <strong>Contatos</strong></span>
         <span id="side">
             <a href="/login" id="meuLink">login </a>
-            <a href="/registro" id="meuLink2">registro</a>
+            <a href="/registro" id="meuLink">registro</a>
         </span>
     </header>
-
-    <div></div>
 
 </body>
 </html>

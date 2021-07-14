@@ -10,14 +10,14 @@
         #cabecalho{
             padding-top: 15px;
             padding-bottom: 15px;
-            padding-left: 10px;
-            padding-right: 10px;
-            box-shadow: 0px 2px 10px gray;
+            background-image: url("base-cabecalho.png");
+            background-size: 100%;
         }
 
         #titulo{
             color:green;
-            font-size: larger;
+            font-size: 30px;
+            margin-left: 5px;
         }
 
         #meuLink{
@@ -32,7 +32,7 @@
         }
 
         #side{
-            padding-left: 80%;
+            padding-left: 60%;
         }
 
         #centro{
@@ -54,11 +54,22 @@
             margin-top: 2%;
         }
 
+        body{
+            background-image: url("bg-ondas.png");
+            background-size: 100%;
+        }
+
+        #imagem{
+            margin-left: 2%;
+        }
+
     </style>
 
 </head>
-<body id="meubody">
+<body>
+
     <div id="cabecalho">
+        <img src="logo-icone-cabecalho.png" id="imagem">
         <span id="titulo">Cadastro de Contatos</span>
         <span id="side">
             <a href="/users" id="meuLink">Contatos</a>
@@ -66,7 +77,8 @@
     </div>
 
     <div id="centro">
-        <form action="/users/cadastro" method="POST" id="formulario">
+        <div id="titulo"> <%- resultado %> </div>
+        <form action="/cadastro" method="POST" id="formulario">
             <label for="nomeContato" name="lblNomeContato"><strong>Nome:</strong></label><br>
             <input type="text" name="nomeContato"><br>
             <label for="telefoneContato" name="lblTelefoneContato"><strong>Telefone:</strong></label><br>

@@ -10,14 +10,14 @@
         #cabecalho{
             padding-top: 15px;
             padding-bottom: 15px;
-            padding-left: 10px;
-            padding-right: 10px;
-            box-shadow: 0px 2px 10px gray;
+            background-image: url("base-cabecalho.png");
+            background-size: 100%;
         }
 
         #titulo{
             color:green;
-            font-size: larger;
+            font-size: 30px;
+            margin-left: 5px;
         }
 
         #meuLink{
@@ -37,7 +37,7 @@
         }
 
         #side{
-            padding-left: 66%;
+            padding-left: 57%;
         }
 
         #centro{
@@ -66,17 +66,28 @@
             color: green;
         }
 
+        body{
+            background-image: url("bg-ondas.png");
+            background-size: 100%;
+        }
+
+        #imagem{
+            margin-left: 2%;
+        }
+
     </style>
 
 </head>
 <body>
     
     <div id="cabecalho">
+        <img src="logo-icone-cabecalho.png" id="imagem">
         <span id="titulo">Usuários</span>
         <span id="side">
-            <a href="/users/cadastro" id="meuLink2">Cadastar contato </a>
-            <a href="/users/update" id="meuLink2">Atualizar contato </a>
-            <a href="/users/delete" id="meuLink2">Apagar contato </a>
+            <a href="/cadastro" id="meuLink2">Cadastar contato </a>
+            <a href="/update" id="meuLink2">Atualizar contato </a>
+            <a href="/delete" id="meuLink2">Apagar contato </a>
+            <a href="/" id="meuLink">Sair </a>
         </span>
     </div>
 
