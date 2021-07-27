@@ -12,8 +12,9 @@ const pool = new Pool({
     password: process.env.DATABASE_PASSWORD,
     port: '5432',
     max: 10,
-    connectionTimeoutMillis: 0,
-    idleTimeoutMillis: 0
+    connectionTimeoutMillis: 2000,
+    idleTimeoutMillis: 30000
 });
+
 
 module.exports = pool;
